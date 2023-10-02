@@ -4,11 +4,11 @@
 
 
 #Making a List for all restaurant's menu and its options
-JoesGourmetBurgers = [""]
+JoesGourmetBurgers = []
 MainStreetPizzaCompany  = ["Vegetarian", "Gluten-Free"]
-CornerCafe = ["Vegetarian", "Vegan" "Gluten-Free"]                           
+CornerCafe = ["Vegetarian", "Vegan", "Gluten-Free"]                           
 MamasFineItalian = ["Vegetarian"]             
-TheChefsKitchen  = ["Vegetarian", "Vegan" "Gluten-Free"]              
+TheChefsKitchen  = ["Vegetarian", "Vegan", "Gluten-Free"]              
 
 #Making a dict to contain the restaurants so it can be connected back to the Menu options above
 restaurants = {
@@ -21,9 +21,9 @@ restaurants = {
 
 
 #Getting the User input of their dietary req.
-QVegetarian = str(input("Is anyone in your party Veg?")).lower() == 'yes'
-QVegan = str(input("Is anyone in your party Vegan?")).lower() == 'yes'
-QGluten_free = str(input("Is anyone in your party Gluten-free?")).lower() == 'yes'
+QVegetarian = input("Is anyone in your party Veg?").lower() == 'yes'
+QVegan = input("Is anyone in your party Vegan?").lower() == 'yes'
+QGluten_free = input("Is anyone in your party Gluten-free?").lower() == 'yes'
 
 #Making a empty list that will hold the suitable restaurants based on user input
 suitable_restaurants = []
@@ -38,11 +38,10 @@ for name, options in restaurants.items(): #Runs a for loop for each restaurant
         continue
     if QGluten_free and "Gluten-Free" not in options:
         continue
-    
     suitable_restaurants.append(name)#If the user input meets req, then it will append the name of the restaurants from using item()
 
 #Printing what we appended to the new Iist and printing that list
 print("Here are your restaurants choices:")
 for restaurants in suitable_restaurants:
-     print(restaurants)
+    print(restaurants)
 
