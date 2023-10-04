@@ -6,7 +6,7 @@
 #Making a List for all restaurant's menu and its options
 print("Welcome to Restaurant Program, where your dietary needs are meet")
 
-repeatProgram = "yes"
+repeatProgram = "yes"#Varible to set Yes as a option 
 while repeatProgram== "yes":
 
 
@@ -50,7 +50,7 @@ while repeatProgram== "yes":
     print("Here are your restaurants choices:  ")
     for restaurants in suitable_restaurants:
         print(restaurants)
-
-    repeatProgram = input("Would you like to change your mind about the menu?")
+    
+    repeatProgram = input("Would you like to change your mind about the menu?") # Repeat = "yes" if the program sees yes then it will start from the top.
 
 Print("The Program is quit")
